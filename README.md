@@ -5,6 +5,9 @@ Live demo: [your-vercel-url]
 A scalable URL shortener built to explore system design concepts:
 caching, rate limiting, atomic operations, and non-blocking analytics.
 
+![alt text](image.png)
+![alt text](image-1.png)
+
 ## Features
 - Custom aliases, expiring links, QR codes
 - Click analytics (time series, referrers) via MongoDB aggregation
