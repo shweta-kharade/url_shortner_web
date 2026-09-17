@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+
+
+@theme {
+  --color-ink: #111318;
+  --color-surface: #2a2d35;
+  --color-surface-hover: #33363f;
+  --color-text: #f7f7f5;
+  --color-muted: #8a8f98;
+  --color-accent: #3b5bfe;
+  --color-chart: #22d3aa;
+  --color-danger: #e5484d;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  @apply bg-ink text-text font-sans;
+  background-image: radial-gradient(circle, #2A2D35 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px rgba(59, 91, 254, 0.15);
+}
+
+/* frontend/src/styles/index.css — add */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.animate-fade-in { animation: fade-in 0.5s ease-out; }
+.animate-float { animation: float 3s ease-in-out infinite; }
