@@ -54,7 +54,7 @@ function Home() {
               />
             </svg>
           </div>
-          <h1 className="text-3xl md:text-4xl leading-tight mb-3">
+          <h1 className="text-4xl leading-tight mb-3">
             Shorten a link.
             <br />
             See what happens to it.
