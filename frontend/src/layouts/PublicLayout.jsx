@@ -1,11 +1,11 @@
 // frontend/src/layouts/PublicLayout.jsx
 import { Link } from "react-router-dom";
-import Logo from '../components/Logo';
+import Logo from "../components/Logo";
 
 function PublicLayout({ children }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex items-center justify-between px-8 py-5 border-b border-surface">
+      <header className="flex items-center justify-between px-4 md:px-8 py-4 md:py-5 border-b border-surface">
         <Link to="/" className="hover:opacity-80 transition-opacity">
           <Logo />
         </Link>
@@ -24,7 +24,7 @@ function PublicLayout({ children }) {
           </Link>
         </div>
       </header>
-      <main className="flex-1 flex items-center justify-center px-8">
+      <main className="flex-1 flex items-center justify-center px-4 md:px-8 py-8">
         {children}
       </main>
     </div>

@@ -43,7 +43,7 @@ function Dashboard({ shortCode }) {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      {/* <div className="flex items-center justify-between mb-8">
         <div>
           <p className="text-xs text-muted mb-1">Link</p>
           <h2 className="font-mono text-lg text-accent">{shortCode}</h2>
@@ -62,7 +62,33 @@ function Dashboard({ shortCode }) {
             {copied ? "Copied" : "Copy link"}
           </button>
         </div>
+      </div> */}
+
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div className="min-w-0">
+          <p className="text-xs text-muted mb-1">Link</p>
+          <h2 className="font-mono text-lg text-accent truncate">
+            {shortCode}
+          </h2>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="bg-text p-2 rounded-sm">
+            <QRCodeSVG
+              value={`${import.meta.env.VITE_API_URL}/${shortCode}`}
+              size={56}
+            />
+          </div>
+          <button
+            onClick={handleCopy}
+            className="text-sm whitespace-nowrap text-muted hover:text-text border border-surface rounded-sm px-3 py-1.5 transition-colors"
+          >
+            {copied ? "Copied" : "Copy link"}
+          </button>
+        </div>
       </div>
+
+      {/* stat grid */}
+      <div className="grid grid-cols-2 gap-3 md:gap-4 mb-10"></div>
 
       <div className="grid grid-cols-2 gap-4 mb-10">
         <StatCard label="Total clicks" value={analytics.totalClicks} accent />
