@@ -1,6 +1,6 @@
 // frontend/src/layouts/PublicLayout.jsx
 import { Link } from "react-router-dom";
-import Logo from "../components/Logo";
+import Logo from '../components/Logo';
 
 function PublicLayout({ children }) {
   return (
@@ -24,9 +24,8 @@ function PublicLayout({ children }) {
           </Link>
         </div>
       </header>
-      <main className="flex-1 flex items-center justify-center px-4 md:px-8 py-8">
-        {children}
-      </main>
+      <main className="flex-1 flex items-center justify-center px-4 md:px-8 py-8">{children}</main>
+        
     </div>
   );
 }
